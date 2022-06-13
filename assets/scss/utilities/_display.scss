@@ -1,0 +1,191 @@
+/* ------------------------------------------ */
+/* Display ---------------------------------- */
+/* ------------------------------------------ */
+
+@use "../helpers" as *;
+
+.display-none {
+  display: none;
+}
+.display-invisible {
+  visibility: hidden;
+}
+
+.display-inline {
+  display: inline;
+}
+.display-block {
+  display: block;
+}
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-grid {
+  display: grid;
+  gap: 2em;
+}
+.display-inline-grid {
+  display: inline-grid;
+}
+.display-flex {
+  display: flex;
+}
+.display-inline-flex {
+  display: inline-flex;
+}
+
+.display-table {
+  display: table;
+}
+.display-inline-table {
+  display: inline-table;
+}
+
+.display-initial {
+  display: initial;
+}
+.display-inherit {
+  display: inherit;
+}
+
+@media (min-width: $breakpoint__tablet) {
+  .desktop-display-none {
+    display: none;
+  }
+  .desktop-display-invisible {
+    visibility: hidden;
+  }
+
+  .desktop-display-inline {
+    display: inline;
+  }
+  .desktop-display-block {
+    display: block;
+  }
+  .desktop-display-inline-block {
+    display: inline-block;
+  }
+
+  .desktop-display-grid {
+    display: grid;
+    gap: 2em;
+  }
+  .desktop-display-inline-grid {
+    display: inline-grid;
+  }
+  .desktop-display-flex {
+    display: flex;
+  }
+  .desktop-display-inline-flex {
+    display: inline-flex;
+  }
+
+  .desktop-display-table {
+    display: table;
+  }
+  .desktop-display-inline-table {
+    display: inline-table;
+  }
+
+  .desktop-display-initial {
+    display: initial;
+  }
+  .desktop-display-inherit {
+    display: inherit;
+  }
+}
+
+@media (min-width: $breakpoint__mobile) and (max-width: $breakpoint__tablet) {
+  .tablet-display-none {
+    display: none;
+  }
+  .tablet-display-invisible {
+    visibility: hidden;
+  }
+
+  .tablet-display-inline {
+    display: inline;
+  }
+  .tablet-display-block {
+    display: block;
+  }
+  .tablet-display-inline-block {
+    display: inline-block;
+  }
+
+  .tablet-display-grid {
+    display: grid;
+    gap: 1.5em;
+  }
+  .tablet-display-inline-grid {
+    display: inline-grid;
+  }
+  .tablet-display-flex {
+    display: flex;
+  }
+  .tablet-display-inline-flex {
+    display: inline-flex;
+  }
+
+  .tablet-display-table {
+    display: table;
+  }
+  .tablet-display-inline-table {
+    display: inline-table;
+  }
+
+  .tablet-display-initial {
+    display: initial;
+  }
+  .tablet-display-inherit {
+    display: inherit;
+  }
+}
+
+@media (max-width: $breakpoint__mobile) {
+  .mobile-display-none {
+    display: none;
+  }
+  .mobile-display-invisible {
+    visibility: hidden;
+  }
+
+  .mobile-display-inline {
+    display: inline;
+  }
+  .mobile-display-block {
+    display: block;
+  }
+  .mobile-display-inline-block {
+    display: inline-block;
+  }
+
+  .mobile-display-grid {
+    display: grid;
+    gap: 1em;
+  }
+  .mobile-display-inline-grid {
+    display: inline-grid;
+  }
+  .mobile-display-flex {
+    display: flex;
+  }
+  .mobile-display-inline-flex {
+    display: inline-flex;
+  }
+
+  .mobile-display-table {
+    display: table;
+  }
+  .mobile-display-inline-table {
+    display: inline-table;
+  }
+
+  .mobile-display-initial {
+    display: initial;
+  }
+  .mobile-display-inherit {
+    display: inherit;
+  }
+}

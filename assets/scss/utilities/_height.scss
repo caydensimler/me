@@ -1,0 +1,55 @@
+/* ------------------------------------------ */
+/* Height ----------------------------------- */
+/* ------------------------------------------ */
+@use "../helpers" as *;
+
+// There 100% has to be a better way to do this.
+// Still trying to figure out how to optimize this setup.
+
+.height-0 {
+  height: 0vh;
+}
+
+@for $i from 1 through 20 {
+  $i: $i * 5;
+  .height-#{$i} {
+    height: #{$i}vh;
+  }
+}
+
+// Desktop
+@media (min-width: $breakpoint__tablet) {
+  .desktop-height-0 {
+    height: 0vh;
+  }
+  @for $i from 1 through 20 {
+    $i: $i * 5;
+    .desktop-height-#{$i} {
+      height: #{$i}vh;
+    }
+  }
+}
+
+@media (min-width: $breakpoint__mobile) and (max-width: $breakpoint__tablet) {
+  .tablet-height-0 {
+    height: 0vh;
+  }
+  @for $i from 1 through 20 {
+    $i: $i * 5;
+    .tablet-height-#{$i} {
+      height: #{$i}vh;
+    }
+  }
+}
+
+@media (max-width: $breakpoint__mobile) {
+  .mobile-height-0 {
+    height: 0vh;
+  }
+  @for $i from 1 through 20 {
+    $i: $i * 5;
+    .mobile-height-#{$i} {
+      height: #{$i}vh;
+    }
+  }
+}

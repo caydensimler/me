@@ -1,0 +1,17 @@
+/* ------------------------------------------ */
+/* Root ------------------------------------- */
+/* ------------------------------------------ */
+
+@use "../helpers" as *;
+@use "../vendors" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}

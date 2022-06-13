@@ -1,0 +1,69 @@
+/* ------------------------------------------ */
+/* Background ------------------------------- */
+/* ------------------------------------------ */
+
+@use "../helpers" as *;
+
+.bg-cover {
+  background-size: cover;
+}
+.bg-contain {
+  background-size: contain;
+}
+.bg-auto {
+  background-size: auto;
+}
+
+/* Background Position */
+.bg-left-top {
+  background-position: left top;
+}
+.bg-center-top {
+  background-position: center top;
+}
+.bg-right-top {
+  background-position: right top;
+}
+.bg-left-center {
+  background-position: left center;
+}
+.bg-center-center {
+  background-position: center center;
+}
+.bg-right-center {
+  background-position: right center;
+}
+.bg-left-bottom {
+  background-position: left bottom;
+}
+.bg-center-bottom {
+  background-position: center bottom;
+}
+.bg-right-bottom {
+  background-position: right bottom;
+}
+
+/* Background Repeat*/
+.bg-repeat {
+  background-repeat: repeat;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.bg-repeat-x {
+  background-repeat: repeat-x;
+}
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
+/* Background Attachment */
+.bg-local {
+  background-attachment: local;
+}
+.bg-scroll {
+  background-attachment: scroll;
+}
+.bg-fixed {
+  background-attachment: fixed;
+}

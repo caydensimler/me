@@ -1,0 +1,14 @@
+/* ------------------------------------------ */
+/* Miscellaneous Utility Classes ------------ */
+/* ------------------------------------------ */
+@use "../helpers" as *;
+
+.full-width,
+.max-width,
+.fullwidth {
+  max-width: 100% !important;
+}
+
+.contained {
+  max-width: $content__width !important;
+}

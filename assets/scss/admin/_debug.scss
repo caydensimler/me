@@ -1,0 +1,67 @@
+/* ------------------------------------------ */
+/* Debug ------------------------------------ */
+/* ------------------------------------------ */
+
+@use "../helpers" as *;
+@use "../vendors" as *;
+
+.debugging {
+  position: relative;
+  border-bottom: 2px solid red;
+}
+
+.internal-tag {
+  &.internal-tag_error {
+    background-color: yellow;
+    padding: $padding__default;
+    margin: 1em 0px;
+  }
+
+  &.internal-tag_debug {
+    border: 2px solid red;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 1em;
+
+    .label {
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      position: absolute;
+      top: -20px;
+      right: 0px;
+    }
+
+    .display-grid {
+      gap: 0px;
+      grid-template-columns: 115px 1fr;
+
+      div {
+        font-size: 13px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0.2em 0;
+
+        &:nth-child(2n) {
+          border-left: 1px solid rgba(0, 0, 0, 0.1);
+          padding-left: 10px;
+        }
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+          border-bottom: none;
+        }
+      }
+
+      h6 {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 1em;
+
+        &:nth-child(2) {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

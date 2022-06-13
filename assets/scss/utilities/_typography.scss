@@ -1,0 +1,83 @@
+/* ------------------------------------------ */
+/* Typography ------------------------------- */
+/* ------------------------------------------ */
+
+@use "../helpers" as *;
+
+.italic {
+  font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.left-align {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right-align {
+  text-align: right;
+}
+.justify {
+  text-align: justify;
+}
+
+@media (min-width: $breakpoint__tablet) {
+  .desktop-left-align {
+    text-align: left;
+  }
+  .desktop-center {
+    text-align: center;
+  }
+  .desktop-right-align {
+    text-align: right;
+  }
+  .desktop-justify {
+    text-align: justify;
+  }
+}
+
+@media (min-width: $breakpoint__mobile) and (max-width: $breakpoint__tablet) {
+  .tablet-left-align {
+    text-align: left;
+  }
+  .tablet-center {
+    text-align: center;
+  }
+  .tablet-right-align {
+    text-align: right;
+  }
+  .tablet-justify {
+    text-align: justify;
+  }
+}
+
+@media (max-width: $breakpoint__mobile) {
+  .mobile-left-align {
+    text-align: left;
+  }
+  .mobile-center {
+    text-align: center;
+  }
+  .mobile-right-align {
+    text-align: right;
+  }
+  .mobile-justify {
+    text-align: justify;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+.break-word {
+  word-wrap: break-word;
+}

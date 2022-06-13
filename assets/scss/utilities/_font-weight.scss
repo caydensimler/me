@@ -1,0 +1,39 @@
+/* ------------------------------------------ */
+/* Font Weight ------------------------------ */
+/* ------------------------------------------ */
+@use "../helpers" as *;
+
+@for $i from 1 through 9 {
+  $i: $i * 100;
+  .weight-#{$i} {
+    font-weight: #{$i};
+  }
+}
+
+// Desktop
+@media (min-width: $breakpoint__tablet) {
+  @for $i from 1 through 20 {
+    $i: $i * 100;
+    .desktop-weight-#{$i} {
+      font-weight: #{$i};
+    }
+  }
+}
+
+@media (min-width: $breakpoint__mobile) and (max-width: $breakpoint__tablet) {
+  @for $i from 1 through 20 {
+    $i: $i * 100;
+    .tablet-weight-#{$i} {
+      font-weight: #{$i};
+    }
+  }
+}
+
+@media (max-width: $breakpoint__mobile) {
+  @for $i from 1 through 20 {
+    $i: $i * 100;
+    .mobile-weight-#{$i} {
+      font-weight: #{$i};
+    }
+  }
+}

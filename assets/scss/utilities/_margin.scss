@@ -1,0 +1,118 @@
+/* ------------------------------------------ */
+/* Margin ---------------------------------- */
+/* ------------------------------------------ */
+@use "../helpers" as *;
+
+// There 100% has to be a better way to do this.
+// Still trying to figure out how to optimize this setup.
+
+@for $i from 0 through 6 {
+  .m#{$i} {
+    margin: #{$i}rem !important;
+  }
+  .ml#{$i} {
+    margin-left: #{$i}rem !important;
+  }
+  .mr#{$i} {
+    margin-right: #{$i}rem !important;
+  }
+  .mt#{$i} {
+    margin-top: #{$i}rem !important;
+  }
+  .mb#{$i} {
+    margin-bottom: #{$i}rem !important;
+  }
+  .mx#{$i} {
+    margin-left: #{$i}rem !important;
+    margin-right: #{$i}rem !important;
+  }
+  .my#{$i} {
+    margin-top: #{$i}rem !important;
+    margin-bottom: #{$i}rem !important;
+  }
+}
+
+// Desktop
+@media (min-width: $breakpoint__tablet) {
+  @for $i from 0 through 6 {
+    .desktop-m#{$i} {
+      margin: #{$i}rem !important;
+    }
+    .desktop-ml#{$i} {
+      margin-left: #{$i}rem !important;
+    }
+    .desktop-mr#{$i} {
+      margin-right: #{$i}rem !important;
+    }
+    .desktop-mt#{$i} {
+      margin-top: #{$i}rem !important;
+    }
+    .desktop-mb#{$i} {
+      margin-bottom: #{$i}rem !important;
+    }
+    .desktop-mx#{$i} {
+      margin-left: #{$i}rem !important;
+      margin-right: #{$i}rem !important;
+    }
+    .desktop-my#{$i} {
+      margin-top: #{$i}rem !important;
+      margin-bottom: #{$i}rem !important;
+    }
+  }
+}
+
+@media (min-width: $breakpoint__mobile) and (max-width: $breakpoint__tablet) {
+  @for $i from 0 through 6 {
+    .tablet-m#{$i} {
+      margin: #{$i}rem !important;
+    }
+    .tablet-ml#{$i} {
+      margin-left: #{$i}rem !important;
+    }
+    .tablet-mr#{$i} {
+      margin-right: #{$i}rem !important;
+    }
+    .tablet-mt#{$i} {
+      margin-top: #{$i}rem !important;
+    }
+    .tablet-mb#{$i} {
+      margin-bottom: #{$i}rem !important;
+    }
+    .tablet-mx#{$i} {
+      margin-left: #{$i}rem !important;
+      margin-right: #{$i}rem !important;
+    }
+    .tablet-my#{$i} {
+      margin-top: #{$i}rem !important;
+      margin-bottom: #{$i}rem !important;
+    }
+  }
+}
+
+@media (max-width: $breakpoint__mobile) {
+  @for $i from 0 through 6 {
+    .mobile-m#{$i} {
+      margin: #{$i}rem !important;
+    }
+    .mobile-ml#{$i} {
+      margin-left: #{$i}rem !important;
+    }
+    .mobile-mr#{$i} {
+      margin-right: #{$i}rem !important;
+    }
+    .mobile-mt#{$i} {
+      margin-top: #{$i}rem !important;
+    }
+    .mobile-mb#{$i} {
+      margin-bottom: #{$i}rem !important;
+    }
+    .mobile-mx#{$i} {
+      margin-left: #{$i}rem !important;
+      margin-right: #{$i}rem !important;
+    }
+    .mobile-my#{$i} {
+      margin-top: #{$i}rem !important;
+      margin-bottom: #{$i}rem !important;
+    }
+  }
+}

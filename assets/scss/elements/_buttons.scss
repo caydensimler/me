@@ -1,0 +1,45 @@
+/* ------------------------------------------ */
+/* Buttons ---------------------------------- */
+/* ------------------------------------------ */
+
+@use "../helpers" as *;
+@use "../vendors" as *;
+
+body:not(.wp-admin) div.wp-block-button,
+// slightly more specific target for back-end to avoid collision with core WP styling
+.editor-styles-wrapper div.wp-block-button {
+  .wp-block-button__link {
+    transition: $transition__default;
+  }
+
+  // Shared Button Styles
+  &.is-style-outline .wp-block-button__link,
+  &.is-style-fill .wp-block-button__link {
+    padding: $button__padding;
+    border-radius: $button__border-radius;
+  }
+
+  // Outline Button
+  &.is-style-outline .wp-block-button__link {
+    color: $color__black;
+    background-color: transparent;
+    border: $button__border-thickness solid $color__black;
+
+    &:hover {
+      color: $color__white;
+      background-color: $color__black;
+    }
+  }
+
+  // Fill Button
+  &.is-style-fill .wp-block-button__link {
+    color: $color__white;
+    background-color: $color__black;
+    border: $button__border-thickness solid $color__black;
+
+    &:hover {
+      background-color: transparent;
+      color: $color__black;
+    }
+  }
+}

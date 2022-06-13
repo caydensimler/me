@@ -1,0 +1,118 @@
+/* ------------------------------------------ */
+/* Padding ---------------------------------- */
+/* ------------------------------------------ */
+@use "../helpers" as *;
+
+// There 100% has to be a better way to do this.
+// Still trying to figure out how to optimize this setup.
+
+@for $i from 0 through 6 {
+  .p#{$i} {
+    padding: #{$i}rem !important;
+  }
+  .pl#{$i} {
+    padding-left: #{$i}rem !important;
+  }
+  .pr#{$i} {
+    padding-right: #{$i}rem !important;
+  }
+  .pt#{$i} {
+    padding-top: #{$i}rem !important;
+  }
+  .pb#{$i} {
+    padding-bottom: #{$i}rem !important;
+  }
+  .px#{$i} {
+    padding-left: #{$i}rem !important;
+    padding-right: #{$i}rem !important;
+  }
+  .py#{$i} {
+    padding-top: #{$i}rem !important;
+    padding-bottom: #{$i}rem !important;
+  }
+}
+
+// Desktop
+@media (min-width: $breakpoint__tablet) {
+  @for $i from 0 through 6 {
+    .desktop-p#{$i} {
+      padding: #{$i}rem !important;
+    }
+    .desktop-pl#{$i} {
+      padding-left: #{$i}rem !important;
+    }
+    .desktop-pr#{$i} {
+      padding-right: #{$i}rem !important;
+    }
+    .desktop-pt#{$i} {
+      padding-top: #{$i}rem !important;
+    }
+    .desktop-pb#{$i} {
+      padding-bottom: #{$i}rem !important;
+    }
+    .desktop-px#{$i} {
+      padding-left: #{$i}rem !important;
+      padding-right: #{$i}rem !important;
+    }
+    .desktop-py#{$i} {
+      padding-top: #{$i}rem !important;
+      padding-bottom: #{$i}rem !important;
+    }
+  }
+}
+
+@media (min-width: $breakpoint__mobile) and (max-width: $breakpoint__tablet) {
+  @for $i from 0 through 6 {
+    .tablet-p#{$i} {
+      padding: #{$i}rem !important;
+    }
+    .tablet-pl#{$i} {
+      padding-left: #{$i}rem !important;
+    }
+    .tablet-pr#{$i} {
+      padding-right: #{$i}rem !important;
+    }
+    .tablet-pt#{$i} {
+      padding-top: #{$i}rem !important;
+    }
+    .tablet-pb#{$i} {
+      padding-bottom: #{$i}rem !important;
+    }
+    .tablet-px#{$i} {
+      padding-left: #{$i}rem !important;
+      padding-right: #{$i}rem !important;
+    }
+    .tablet-py#{$i} {
+      padding-top: #{$i}rem !important;
+      padding-bottom: #{$i}rem !important;
+    }
+  }
+}
+
+@media (max-width: $breakpoint__mobile) {
+  @for $i from 0 through 6 {
+    .mobile-p#{$i} {
+      padding: #{$i}rem !important;
+    }
+    .mobile-pl#{$i} {
+      padding-left: #{$i}rem !important;
+    }
+    .mobile-pr#{$i} {
+      padding-right: #{$i}rem !important;
+    }
+    .mobile-pt#{$i} {
+      padding-top: #{$i}rem !important;
+    }
+    .mobile-pb#{$i} {
+      padding-bottom: #{$i}rem !important;
+    }
+    .mobile-px#{$i} {
+      padding-left: #{$i}rem !important;
+      padding-right: #{$i}rem !important;
+    }
+    .mobile-py#{$i} {
+      padding-top: #{$i}rem !important;
+      padding-bottom: #{$i}rem !important;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "layout": {
+      "contentSize": "1280px",
+      "wideSize": "100%"
+    },
+    "color": {
+      "custom": false,
+      "customGradient": false,
+      "palette": [
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Off-White",
+          "slug": "off-white",
+          "color": "#f8f7f7"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "#000000"
+        }
+      ],
+      "defaultPalette": false,
+      "gradients": [],
+      "duotone": [
+        {
+          "colors": ["#000", "#FFF"],
+          "slug": "black-and-white",
+          "name": "Black and White"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "dropCap": false,
+      "letterSpacing": false,
+      "fontStyle": true,
+      "fontWeight": true,
+      "fontSizes": [
+        {
+          "name": "H1",
+          "slug": "h1",
+          "size": "clamp(32px, 5vw, 50px)"
+        },
+        {
+          "name": "H2",
+          "slug": "h2",
+          "size": "clamp(26px, 4.5vw, 40px)"
+        },
+        {
+          "name": "H3",
+          "slug": "h3",
+          "size": "clamp(22px, 4vw, 34px)"
+        },
+        {
+          "name": "H4",
+          "slug": "h4",
+          "size": "clamp(22px, 3.8vw, 30px)"
+        },
+        {
+          "name": "H5",
+          "slug": "h5",
+          "size": "clamp(17px, 3vw, 20px)"
+        },
+        {
+          "name": "H6",
+          "slug": "h6",
+          "size": "clamp(13px, 3vw, 15px)"
+        },
+        {
+          "name": "Large Paragraph",
+          "slug": "p-large",
+          "size": "clamp(20px, 4vw, 28px)"
+        },
+        {
+          "name": "Paragraph",
+          "slug": "p-normal",
+          "size": "clamp(14px, 3vw, 17px)"
+        },
+        {
+          "name": "Small Paragraph",
+          "slug": "p-small",
+          "size": "clamp(12px, 3vw, 14px)"
+        }
+      ]
+    },
+    "blocks": {
+      "core/button": {
+        "typography": {
+          "fontSizes": []
+        },
+        "border": {
+          "radius": false
+        },
+        "color": {
+          "text": false,
+          "background": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/* ------------------------------------------ */
+/* Body ------------------------------------- */
+/* ------------------------------------------ */
+
+@use "../helpers" as *;
+@use "../vendors" as *;
+
+// Primary Container Settings
+.grid-container:not(.site),
+.wp-block-group:not(.has-background),
+.wp-block-columns:not(.has-background) {
+  margin: 0 auto;
+  max-width: $content__width;
+  padding: 0px $padding__default;
+}

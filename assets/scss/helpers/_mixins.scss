@@ -1,0 +1,135 @@
+@use "variables" as *;
+
+// CSS Grid
+@mixin grid($columns: repeat(2, 1fr), $gap: $padding__default) {
+  display: grid;
+  grid-template-columns: $columns;
+  gap: $gap;
+}
+
+// Flex Box
+@mixin centered-grid($gap: $padding__default) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: $gap;
+}
+
+// Positioning
+@mixin position-absolute(
+  $pos-top: 0,
+  $pos-right: 0,
+  $pos-bottom: unset,
+  $pos-left: unset
+) {
+  position: absolute;
+  inset: $pos-top $pos-right $pos-bottom $pos-left;
+}
+
+@mixin margin-auto($axis: x) {
+  @if ($axis == x or $axis == both) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  } // end if x or both
+
+  @else if ($axis == y or $axis == both) {
+    margin: {
+      top: auto;
+      bottom: auto;
+    }
+  } // end if x or both
+
+  @else {
+    @warn "Unknown axis '#{$axis}'. Choices are: x, y, or both.";
+  } // end else warning
+}
+
+// Sizing
+@mixin contained(
+  $size: 1440px,
+  $axis: x,
+  $alignment: middle,
+  $paddingX: $padding__default,
+  $paddingY: 0
+) {
+  @if $axis == x {
+    max-width: $size;
+
+    @if ($alignment == middle or $alignment == center) {
+      margin-left: auto;
+      margin-right: auto;
+    } @else if ($alignment == end or $alignment == right) {
+      margin-left: auto;
+    } @else {
+      @warn "Unknown alignment '#{$alignment}'. Choices are: middle, center, end, or right.";
+    }
+  } // end if $axis == x
+
+  @else if ($axis == y) {
+    max-height: $size;
+
+    @if ($alignment == middle or $alignment == center) {
+      margin-top: auto;
+      margin-bottom: auto;
+    } @else if ($alignment == end or $alignment == bottom) {
+      margin-top: auto;
+    } @else {
+      @warn "Unknown alignment '#{$alignment}'. Choices are: middle, center, end, or bottom.";
+    }
+  } // end if $axis == y
+
+  @else {
+    @warn "Unknown axis '#{$axis}'. Choices are either x or y.";
+  } // end else warning
+
+  padding: $paddingY $paddingX;
+}
+
+// Background
+@mixin background-cover($position: center, $repeat: no-repeat) {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: $position;
+}
+
+// Miscellaneous
+@mixin arrow($direction: down, $size: 5px, $color: $color__secondary) {
+  width: 0;
+  height: 0;
+  transform: rotate(0deg);
+  transition: $transition__default;
+
+  @if ($direction == left) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == right) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if ($direction == down) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else if ($direction == up) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else {
+    @warn "Unknown direction '#{$direction}'. Choices are: up, down, left, or right.";
+  }
+}
+
+@mixin hide {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}

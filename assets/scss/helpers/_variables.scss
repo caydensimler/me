@@ -1,0 +1,26 @@
+// Including the Vendor partials here allows us to overwrite their variables.
+@use "../vendors" as *;
+
+// Colors
+$color__white: #fff;
+$color__off-white: #f8f7f7;
+$color__black: #000;
+
+// Content Width
+$content__width: 1200px;
+
+// Padding
+$padding__default: 1em;
+
+// Breakpoints
+$breakpoint__mobile: 768px;
+$breakpoint__tablet: 1024px;
+$breakpoint__desktop: 1440px;
+
+// Transitions
+$transition__default: 0.3s;
+
+// Buttons
+$button__padding: 14px 38px;
+$button__border-radius: 0px;
+$button__border-thickness: 2px;

@@ -1,0 +1,17 @@
+/* Admin ------------------------------------ */
+/* ------------------------------------------ */
+
+@forward "debug";
+
+// This ensures that non-logged in site users will never see internal tags.
+body:not(.logged-in) {
+  .internal-tag {
+    display: none;
+  }
+}
+
+// Giving the page/post title some space on the back-end.
+div.edit-post-visual-editor__post-title-wrapper {
+  margin-bottom: 50px;
+  padding-left: 30px;
+}
